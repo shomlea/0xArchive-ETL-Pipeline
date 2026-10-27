@@ -66,7 +66,7 @@ def etl_pipeline():
             cleaned_rows.append({
                 "venue": venue,
                 "symbol": symbol,
-                "timestamp": pd.to_datetime(row.get("timestamp"), unit="ms", utc=True).strftime("%Y-%m-%d %H:%M:%S"),
+                "timestamp": pd.to_datetime(row.get("timestamp"), utc=True).strftime("%Y-%m-%d %H:%M:%S"),
                 "open": float(row.get("open")),
                 "high": float(row.get("high")),
                 "low": float(row.get("low")),
